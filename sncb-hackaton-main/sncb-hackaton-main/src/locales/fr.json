@@ -1,0 +1,57 @@
+{
+  "groupTrip": "Voyage de groupe",
+  "subtitle": "Toutes les informations sur votre voyage de groupe en train",
+  "reservation": "Réservation n° {{num}}",
+  "change": "Modifier la réservation",
+  "timeToDeparture": "Temps avant le départ",
+
+  "common": {
+    "modify": "Modifier",
+    "people": "personnes"
+  },
+
+  "groupSummary": {
+    "title": "Votre groupe",
+    "under12": "Moins de 12 ans",
+    "teens": "12–17 ans",
+    "adults": "18 ans et plus"
+  },
+
+  "invoice": {
+    "title": "Informations de facturation"
+  },
+
+  "tripSummary": {
+    "title": "Votre voyage de groupe"
+  },
+
+  "userInfo": {
+    "title": "Vos coordonnées"
+  },
+
+  "welcome": {
+    "hello": "Bonjour {name} !",
+    "helloGroup": "Bonjour {name}!",
+    "thankYou": "Merci d’avoir réservé votre voyage de groupe.",
+    "reservation": "Réservation n° {num}",
+    "subtitleTitle": "Nous sommes ravis de vous accueillir à bord",
+    "subtitleText": "Vous trouverez ci-dessous tous les conseils et outils dont vous avez besoin pour un voyage en douceur. N’hésitez pas à consulter votre itinéraire, à suivre le train en temps réel et à modifier vos informations à tout moment.",
+    "cta": "Voir votre voyage →"
+  },
+
+  "liveTracking": {
+    "title": "Suivez votre train en temps réel",
+    "location": "Votre position : Quai {track} à {station}.",
+    "liveLocation": "Position en direct",
+    "track": "Quai",
+    "compositionTitle": "Composition du train",
+    "yourReservedSeats": "Vos places réservées",
+    "otherCarriages": "Autres voitures",
+    "seatInfoTitle": "Vos places réservées",
+    "seatInfo": "Voiture {carriage} – Places {seats}",
+    "expectedOccupancy": "Occupation prévue",
+    "occupancyLevel": "Occupation prévue : faible à modérée",
+    "intermediate": "{count} arrêts intermédiaires",
+    "prepareDisembark": "Préparez-vous à descendre"
+  }
+}

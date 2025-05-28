@@ -1,0 +1,57 @@
+{
+  "groupTrip": "Group Travel",
+  "subtitle": "All information about your group train journey",
+  "reservation": "Reservation no.  30000 666 0265",
+  "change": "Change reservation",
+  "timeToDeparture": "Time to departure",
+
+  "common": {
+    "modify": "Modify",
+    "people": "people"
+  },
+
+  "groupSummary": {
+    "title": "Your Group",
+    "under12": "Under 12 years",
+    "teens": "12–17 years",
+    "adults": "18 years and older"
+  },
+
+  "invoice": {
+    "title": "Billing Information"
+  },
+
+  "tripSummary": {
+    "title": "Your Group Trip"
+  },
+
+  "userInfo": {
+    "title": "Your Contact Details"
+  },
+
+  "welcome": {
+    "hello": "Hello {name}!",
+    "helloGroup": "Hello {name}!",
+    "thankYou": "Thank you for booking your group trip.",
+    "reservation": "Reservation # {num}",
+    "subtitleTitle": "We’re excited to welcome you on board",
+    "subtitleText": "Below you’ll find all the tips and tools you need for a smooth journey. Feel free to explore your itinerary, track the train in real time, and adjust your details at any time.",
+    "cta": "View your journey →"
+  },
+
+  "liveTracking": {
+    "title": "Follow your train in real time",
+    "location": "Your location: Track {track} at {station}.",
+    "liveLocation": "Live location",
+    "track": "Track",
+    "compositionTitle": "Train Composition",
+    "yourReservedSeats": "Your reserved seats",
+    "otherCarriages": "Other carriages",
+    "seatInfoTitle": "Your Reserved Seats",
+    "seatInfo": "Carriage {carriage} – Seats {seats}",
+    "expectedOccupancy": "Expected Occupancy",
+    "occupancyLevel": "Expected occupancy: low to moderate",
+    "intermediate": "{count} intermediate stops",
+    "prepareDisembark": "Get ready to disembark"
+  }
+}
