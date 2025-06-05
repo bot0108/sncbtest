@@ -5,13 +5,13 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import OrangeAurora from "../components/orange-aurora"
 import { FormCard } from "../components/form-card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Dialog, DialogContent } from "@/components/ui/dialog"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Button } from "../components/ui/button"
+import { Input } from "../components/ui/input"
+import { Label } from "../components/ui/label"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select"
+import { Dialog, DialogContent } from "../components/ui/dialog"
+import { Sheet, SheetContent, SheetTrigger } from "../components/ui/sheet"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs"
 import {
   AlertCircle,
   CheckCircle2,
@@ -24,7 +24,7 @@ import {
   Users,
   Zap,
 } from "lucide-react"
-import { Alert, AlertDescription } from "@/components/ui/alert"
+import { Alert, AlertDescription } from "../components/ui/alert"
 
 export default function LandingPage() {
   const [activeTab, setActiveTab] = useState<string>("login")
