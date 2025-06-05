@@ -3,7 +3,7 @@
 import type React from "react"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import ModernAurora from "../components/modern-aurora"
+import BrightAurora from "../components/bright-aurora"
 import { FormCard } from "../components/form-card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -93,20 +93,20 @@ export default function LandingPage() {
   const renderLoginForm = () => (
     <form onSubmit={handleLogin} className="space-y-6">
       {errorMessage && (
-        <Alert variant="destructive" className="bg-red-950/50 border-red-800/50 text-red-200">
+        <Alert variant="destructive" className="bg-red-50 border-red-200 text-red-800">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription className="font-medium">{errorMessage}</AlertDescription>
         </Alert>
       )}
       {successMessage && (
-        <Alert className="bg-green-950/50 border-green-800/50 text-green-200">
+        <Alert className="bg-green-50 border-green-200 text-green-800">
           <CheckCircle2 className="h-4 w-4" />
           <AlertDescription className="font-medium">{successMessage}</AlertDescription>
         </Alert>
       )}
 
       <div className="space-y-2">
-        <Label htmlFor="email" className="text-sm font-medium text-slate-300">
+        <Label htmlFor="email" className="text-sm font-medium text-gray-700">
           Email cím
         </Label>
         <Input
@@ -116,12 +116,12 @@ export default function LandingPage() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="h-11 bg-slate-800/50 border-slate-600/50 text-white placeholder:text-slate-400 focus:border-purple-500/50 focus:ring-purple-500/20 transition-all duration-200"
+          className="h-11 bg-white/80 border-gray-300 text-gray-900 placeholder:text-gray-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all duration-200"
         />
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="password" className="text-sm font-medium text-slate-300">
+        <Label htmlFor="password" className="text-sm font-medium text-gray-700">
           Jelszó
         </Label>
         <Input
@@ -131,13 +131,13 @@ export default function LandingPage() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          className="h-11 bg-slate-800/50 border-slate-600/50 text-white placeholder:text-slate-400 focus:border-purple-500/50 focus:ring-purple-500/20 transition-all duration-200"
+          className="h-11 bg-white/80 border-gray-300 text-gray-900 placeholder:text-gray-500 focus:border-blue-500 focus:ring-blue-500/20 transition-all duration-200"
         />
       </div>
 
       <Button
         type="submit"
-        className="w-full h-11 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold border-0 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
+        className="w-full h-11 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold border-0 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
       >
         <LogIn className="w-4 h-4 mr-2" />
         Bejelentkezés
@@ -146,10 +146,10 @@ export default function LandingPage() {
       <div className="text-center pt-2">
         <button
           type="button"
-          className="text-sm text-slate-400 hover:text-purple-400 transition-colors duration-200"
+          className="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-200"
           onClick={() => setActiveTab("register")}
         >
-          Még nincs fiókod? <span className="text-purple-400 hover:text-purple-300">Regisztrálj itt</span>
+          Még nincs fiókod? <span className="text-blue-600 hover:text-blue-700 font-medium">Regisztrálj itt</span>
         </button>
       </div>
     </form>
@@ -158,20 +158,20 @@ export default function LandingPage() {
   const renderRegisterForm = () => (
     <form onSubmit={handleRegister} className="space-y-5">
       {errorMessage && (
-        <Alert variant="destructive" className="bg-red-950/50 border-red-800/50 text-red-200">
+        <Alert variant="destructive" className="bg-red-50 border-red-200 text-red-800">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription className="font-medium">{errorMessage}</AlertDescription>
         </Alert>
       )}
       {successMessage && (
-        <Alert className="bg-green-950/50 border-green-800/50 text-green-200">
+        <Alert className="bg-green-50 border-green-200 text-green-800">
           <CheckCircle2 className="h-4 w-4" />
           <AlertDescription className="font-medium">{successMessage}</AlertDescription>
         </Alert>
       )}
 
       <div className="space-y-2">
-        <Label htmlFor="name" className="text-sm font-medium text-slate-300">
+        <Label htmlFor="name" className="text-sm font-medium text-gray-700">
           Teljes név
         </Label>
         <Input
@@ -181,12 +181,12 @@ export default function LandingPage() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="h-11 bg-slate-800/50 border-slate-600/50 text-white placeholder:text-slate-400 focus:border-blue-500/50 focus:ring-blue-500/20 transition-all duration-200"
+          className="h-11 bg-white/80 border-gray-300 text-gray-900 placeholder:text-gray-500 focus:border-orange-500 focus:ring-orange-500/20 transition-all duration-200"
         />
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="register-email" className="text-sm font-medium text-slate-300">
+        <Label htmlFor="register-email" className="text-sm font-medium text-gray-700">
           Email cím
         </Label>
         <Input
@@ -196,13 +196,13 @@ export default function LandingPage() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="h-11 bg-slate-800/50 border-slate-600/50 text-white placeholder:text-slate-400 focus:border-blue-500/50 focus:ring-blue-500/20 transition-all duration-200"
+          className="h-11 bg-white/80 border-gray-300 text-gray-900 placeholder:text-gray-500 focus:border-orange-500 focus:ring-orange-500/20 transition-all duration-200"
         />
       </div>
 
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label htmlFor="register-password" className="text-sm font-medium text-slate-300">
+          <Label htmlFor="register-password" className="text-sm font-medium text-gray-700">
             Jelszó
           </Label>
           <Input
@@ -212,11 +212,11 @@ export default function LandingPage() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="h-11 bg-slate-800/50 border-slate-600/50 text-white placeholder:text-slate-400 focus:border-blue-500/50 focus:ring-blue-500/20 transition-all duration-200"
+            className="h-11 bg-white/80 border-gray-300 text-gray-900 placeholder:text-gray-500 focus:border-orange-500 focus:ring-orange-500/20 transition-all duration-200"
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="confirm-password" className="text-sm font-medium text-slate-300">
+          <Label htmlFor="confirm-password" className="text-sm font-medium text-gray-700">
             Megerősítés
           </Label>
           <Input
@@ -226,13 +226,13 @@ export default function LandingPage() {
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
-            className="h-11 bg-slate-800/50 border-slate-600/50 text-white placeholder:text-slate-400 focus:border-blue-500/50 focus:ring-blue-500/20 transition-all duration-200"
+            className="h-11 bg-white/80 border-gray-300 text-gray-900 placeholder:text-gray-500 focus:border-orange-500 focus:ring-orange-500/20 transition-all duration-200"
           />
         </div>
       </div>
 
       <div className="space-y-2">
-        <Label className="text-sm font-medium text-slate-300">Születési dátum</Label>
+        <Label className="text-sm font-medium text-gray-700">Születési dátum</Label>
         <div className="grid grid-cols-3 gap-3">
           <Input
             type="text"
@@ -240,7 +240,7 @@ export default function LandingPage() {
             value={birthYear}
             onChange={(e) => setBirthYear(e.target.value)}
             required
-            className="h-11 bg-slate-800/50 border-slate-600/50 text-white placeholder:text-slate-400 focus:border-blue-500/50 focus:ring-blue-500/20 transition-all duration-200"
+            className="h-11 bg-white/80 border-gray-300 text-gray-900 placeholder:text-gray-500 focus:border-orange-500 focus:ring-orange-500/20 transition-all duration-200"
           />
           <Input
             type="text"
@@ -248,7 +248,7 @@ export default function LandingPage() {
             value={birthMonth}
             onChange={(e) => setBirthMonth(e.target.value)}
             required
-            className="h-11 bg-slate-800/50 border-slate-600/50 text-white placeholder:text-slate-400 focus:border-blue-500/50 focus:ring-blue-500/20 transition-all duration-200"
+            className="h-11 bg-white/80 border-gray-300 text-gray-900 placeholder:text-gray-500 focus:border-orange-500 focus:ring-orange-500/20 transition-all duration-200"
           />
           <Input
             type="text"
@@ -256,30 +256,30 @@ export default function LandingPage() {
             value={birthDay}
             onChange={(e) => setBirthDay(e.target.value)}
             required
-            className="h-11 bg-slate-800/50 border-slate-600/50 text-white placeholder:text-slate-400 focus:border-blue-500/50 focus:ring-blue-500/20 transition-all duration-200"
+            className="h-11 bg-white/80 border-gray-300 text-gray-900 placeholder:text-gray-500 focus:border-orange-500 focus:ring-orange-500/20 transition-all duration-200"
           />
         </div>
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="gender" className="text-sm font-medium text-slate-300">
+        <Label htmlFor="gender" className="text-sm font-medium text-gray-700">
           Nem
         </Label>
         <Select value={gender} onValueChange={setGender} required>
           <SelectTrigger
             id="gender"
-            className="h-11 bg-slate-800/50 border-slate-600/50 text-white focus:border-blue-500/50 focus:ring-blue-500/20"
+            className="h-11 bg-white/80 border-gray-300 text-gray-900 focus:border-orange-500 focus:ring-orange-500/20"
           >
-            <SelectValue placeholder="Válassz nemet" className="text-slate-400" />
+            <SelectValue placeholder="Válassz nemet" className="text-gray-500" />
           </SelectTrigger>
-          <SelectContent className="bg-slate-800 border-slate-600">
-            <SelectItem value="male" className="text-white hover:bg-slate-700">
+          <SelectContent className="bg-white border-gray-200">
+            <SelectItem value="male" className="text-gray-900 hover:bg-gray-100">
               Férfi
             </SelectItem>
-            <SelectItem value="female" className="text-white hover:bg-slate-700">
+            <SelectItem value="female" className="text-gray-900 hover:bg-gray-100">
               Nő
             </SelectItem>
-            <SelectItem value="other" className="text-white hover:bg-slate-700">
+            <SelectItem value="other" className="text-gray-900 hover:bg-gray-100">
               Egyéb
             </SelectItem>
           </SelectContent>
@@ -288,7 +288,7 @@ export default function LandingPage() {
 
       <Button
         type="submit"
-        className="w-full h-11 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold border-0 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+        className="w-full h-11 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold border-0 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25"
       >
         <UserPlus className="w-4 h-4 mr-2" />
         Regisztráció
@@ -297,28 +297,30 @@ export default function LandingPage() {
       <div className="text-center pt-2">
         <button
           type="button"
-          className="text-sm text-slate-400 hover:text-blue-400 transition-colors duration-200"
+          className="text-sm text-gray-600 hover:text-orange-600 transition-colors duration-200"
           onClick={() => setActiveTab("login")}
         >
-          Van már fiókod? <span className="text-blue-400 hover:text-blue-300">Jelentkezz be</span>
+          Van már fiókod? <span className="text-orange-600 hover:text-orange-700 font-medium">Jelentkezz be</span>
         </button>
       </div>
     </form>
   )
 
   return (
-    <main className="min-h-screen flex flex-col">
-      <ModernAurora colorScheme="purple" />
+    <main className="min-h-screen flex flex-col bg-gradient-to-br from-white via-blue-50 to-orange-50">
+      <BrightAurora colorScheme="vibrant" />
 
       {/* Header */}
       <header className="w-full py-4 px-6 flex items-center justify-between z-10">
-        <h1 className="text-2xl font-bold text-white">JoinMe</h1>
+        <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+          JoinMe
+        </h1>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-4">
           <Button
             variant="ghost"
-            className="text-white hover:bg-white/10 font-medium px-6 py-2 transition-all duration-200"
+            className="text-gray-700 hover:bg-white/50 hover:text-blue-600 font-medium px-6 py-2 transition-all duration-200"
             onClick={() => {
               setActiveTab("login")
               setIsAuthDialogOpen(true)
@@ -328,7 +330,7 @@ export default function LandingPage() {
             Bejelentkezés
           </Button>
           <Button
-            className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white border-0 font-medium px-6 py-2 shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+            className="bg-gradient-to-r from-blue-500 via-orange-500 to-yellow-500 hover:from-blue-600 hover:via-orange-600 hover:to-yellow-600 text-white border-0 font-medium px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             onClick={() => {
               setActiveTab("register")
               setIsAuthDialogOpen(true)
@@ -342,15 +344,15 @@ export default function LandingPage() {
         {/* Mobile Menu Button */}
         <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" className="text-white">
+            <Button variant="ghost" size="icon" className="text-gray-700 hover:text-blue-600">
               <Menu />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] bg-slate-900 border-slate-700">
+          <SheetContent side="right" className="w-[300px] bg-white/95 backdrop-blur-sm border-gray-200">
             <div className="flex flex-col gap-4 pt-8">
               <Button
                 variant="ghost"
-                className="justify-start text-white hover:bg-slate-800"
+                className="justify-start text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                 onClick={() => {
                   setActiveTab("login")
                   setIsAuthDialogOpen(true)
@@ -362,7 +364,7 @@ export default function LandingPage() {
               </Button>
               <Button
                 variant="ghost"
-                className="justify-start text-white hover:bg-slate-800"
+                className="justify-start text-gray-700 hover:bg-orange-50 hover:text-orange-600"
                 onClick={() => {
                   setActiveTab("register")
                   setIsAuthDialogOpen(true)
@@ -374,7 +376,7 @@ export default function LandingPage() {
               </Button>
               <Button
                 variant="ghost"
-                className="justify-start text-white hover:bg-slate-800"
+                className="justify-start text-gray-700 hover:bg-gray-50"
                 onClick={() => (window.location.href = "/about")}
               >
                 Rólunk
@@ -388,31 +390,34 @@ export default function LandingPage() {
       <section className="flex-1 flex flex-col items-center justify-center px-6 py-12 md:py-0">
         <div className="max-w-4xl w-full grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 text-center md:text-left">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
-              Közösség. Élmény. <span className="text-purple-300">Kapcsolódás.</span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent">
+              Közösség. Élmény.{" "}
+              <span className="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+                Kapcsolódás.
+              </span>
             </h2>
-            <p className="text-lg text-slate-300">
+            <p className="text-lg text-gray-700 leading-relaxed">
               Fedezd fel a JoinMe világát, ahol új barátokra lelhetsz, közös programokat szervezhetsz, és részese
               lehetsz egy inspiráló közösségnek!
             </p>
-            <ul className="text-slate-300 space-y-2 list-none md:list-disc md:pl-5">
+            <ul className="text-gray-600 space-y-2 list-none md:list-disc md:pl-5">
               <li className="flex items-center md:block">
-                <ChevronRight className="h-5 w-5 mr-1 md:hidden text-purple-300" />
+                <ChevronRight className="h-5 w-5 mr-1 md:hidden text-blue-500" />
                 Villámgyors regisztráció
               </li>
               <li className="flex items-center md:block">
-                <ChevronRight className="h-5 w-5 mr-1 md:hidden text-purple-300" />
+                <ChevronRight className="h-5 w-5 mr-1 md:hidden text-orange-500" />
                 Programok böngészése és szervezése
               </li>
               <li className="flex items-center md:block">
-                <ChevronRight className="h-5 w-5 mr-1 md:hidden text-purple-300" />
+                <ChevronRight className="h-5 w-5 mr-1 md:hidden text-yellow-500" />
                 Biztonságos, támogató közösség
               </li>
             </ul>
             <div className="pt-4">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white border-0 shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+                className="bg-gradient-to-r from-blue-500 via-orange-500 to-yellow-500 hover:from-blue-600 hover:via-orange-600 hover:to-yellow-600 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 onClick={() => (window.location.href = "/about")}
               >
                 Tudj meg többet
@@ -423,17 +428,17 @@ export default function LandingPage() {
           {/* Mobile Auth Tabs - Shown directly on the landing page for mobile */}
           <div className="md:hidden w-full">
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-              <TabsList className="grid w-full grid-cols-2 mb-6 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 p-1 h-12">
+              <TabsList className="grid w-full grid-cols-2 mb-6 bg-white/70 backdrop-blur-sm border-2 border-white/50 p-1 h-12 shadow-lg">
                 <TabsTrigger
                   value="login"
-                  className="font-medium text-slate-300 data-[state=active]:bg-slate-700 data-[state=active]:text-white transition-all duration-200 h-10"
+                  className="font-medium text-gray-600 data-[state=active]:bg-blue-500 data-[state=active]:text-white transition-all duration-200 h-10"
                 >
                   <LogIn className="w-4 h-4 mr-2" />
                   Bejelentkezés
                 </TabsTrigger>
                 <TabsTrigger
                   value="register"
-                  className="font-medium text-slate-300 data-[state=active]:bg-slate-700 data-[state=active]:text-white transition-all duration-200 h-10"
+                  className="font-medium text-gray-600 data-[state=active]:bg-orange-500 data-[state=active]:text-white transition-all duration-200 h-10"
                 >
                   <UserPlus className="w-4 h-4 mr-2" />
                   Regisztráció
@@ -467,17 +472,17 @@ export default function LandingPage() {
       <Dialog open={isAuthDialogOpen} onOpenChange={setIsAuthDialogOpen}>
         <DialogContent className="sm:max-w-md p-0 bg-transparent border-0 shadow-none">
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-6 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 p-1 h-12">
+            <TabsList className="grid w-full grid-cols-2 mb-6 bg-white/70 backdrop-blur-sm border-2 border-white/50 p-1 h-12 shadow-lg">
               <TabsTrigger
                 value="login"
-                className="font-medium text-slate-300 data-[state=active]:bg-slate-700 data-[state=active]:text-white transition-all duration-200 h-10"
+                className="font-medium text-gray-600 data-[state=active]:bg-blue-500 data-[state=active]:text-white transition-all duration-200 h-10"
               >
                 <LogIn className="w-4 h-4 mr-2" />
                 Bejelentkezés
               </TabsTrigger>
               <TabsTrigger
                 value="register"
-                className="font-medium text-slate-300 data-[state=active]:bg-slate-700 data-[state=active]:text-white transition-all duration-200 h-10"
+                className="font-medium text-gray-600 data-[state=active]:bg-orange-500 data-[state=active]:text-white transition-all duration-200 h-10"
               >
                 <UserPlus className="w-4 h-4 mr-2" />
                 Regisztráció
@@ -498,17 +503,19 @@ export default function LandingPage() {
       </Dialog>
 
       {/* Footer */}
-      <footer className="w-full py-6 px-6 bg-slate-900/60 backdrop-blur-sm z-10">
+      <footer className="w-full py-6 px-6 bg-white/80 backdrop-blur-sm border-t-2 border-white/50 z-10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-white text-sm">© {new Date().getFullYear()} JoinMe. Minden jog fenntartva.</div>
+          <div className="text-gray-700 text-sm font-medium">
+            © {new Date().getFullYear()} JoinMe. Minden jog fenntartva.
+          </div>
           <div className="flex gap-6">
-            <a href="/terms" className="text-sm text-slate-300 hover:text-white transition-colors">
+            <a href="/terms" className="text-sm text-gray-600 hover:text-blue-600 transition-colors font-medium">
               Felhasználási feltételek
             </a>
-            <a href="/privacy" className="text-sm text-slate-300 hover:text-white transition-colors">
+            <a href="/privacy" className="text-sm text-gray-600 hover:text-orange-500 transition-colors font-medium">
               Adatvédelem
             </a>
-            <a href="/contact" className="text-sm text-slate-300 hover:text-white transition-colors">
+            <a href="/contact" className="text-sm text-gray-600 hover:text-yellow-600 transition-colors font-medium">
               Kapcsolat
             </a>
           </div>
